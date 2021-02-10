@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AgileEngineTestTask.Api.Extensions;
 using AgileEngineTestTask1.Application.Services;
 using AgileEngineTestTask1.Models;
 using Microsoft.AspNetCore.Builder;
@@ -46,6 +47,8 @@ namespace AgileEngineTestTask1
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.ConfigureCustomExceptionMiddleware();
 
             app.UseRouting();
 
